@@ -5,6 +5,40 @@
   margin-top: 75px;
 }
 
+.search {
+  margin-left: 50px;
+}
+
+.searchP {
+  padding-right: 115px;
+}
+
+.searchInput {
+  margin-left: 213px;
+  width: 350px;
+  height: 20px;
+}
+
+.alarmP {
+  padding-left: 100px;
+}
+
+.alarmImg {
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 40px;
+  height: 30px;
+}
+
+.alarm {
+  margin-left: 500px;
+  border: 1px solid black;
+  width: 500px;
+  border-color: #166CEC;
+  background-color: #e8f0fd;
+  display: flex;
+}
+
 .mainImg {
   padding: 0 25px 0 25px;
   margin-top: 100px;
