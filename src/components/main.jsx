@@ -41,12 +41,6 @@ const Main = () => {
           window.alert("인증 실패!");
           setDisableLink(true);
         }
-      })
-      .catch((error) => {
-        if (error.response.status != 200) {
-          window.alert("인증 실패!");
-          setDisableLink(true);
-        }
       });
   };
 

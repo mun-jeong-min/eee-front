@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #FFFCFC;
+  background-color: #fffcfc;
   height: 640px;
   margin-top: 75px;
 }
@@ -34,9 +34,10 @@
   margin-left: 500px;
   border: 1px solid black;
   width: 500px;
-  border-color: #166CEC;
+  border-color: #166cec;
   background-color: #e8f0fd;
   display: flex;
+  margin-bottom: 30px;
 }
 
 .mainImg {
@@ -64,12 +65,12 @@
 }
 
 .mainButton {
-  background-color: #8142F5;
+  background-color: #8142f5;
   color: white;
   width: 110px;
   height: 35px;
   border-radius: 30px;
-  border-color: #8142F5;
+  border-color: #8142f5;
 }
 
 .mainButton:hover {
@@ -78,7 +79,7 @@
 
 .emailP {
   margin-top: 75px;
-  color: #6A6D71;
+  color: #6a6d71;
   margin-bottom: 40px;
 }
 
@@ -87,7 +88,7 @@
 }
 
 .mainInput {
-  color: #C3C6C9;
+  color: #c3c6c9;
   width: 320px;
   height: 35px;
   text-align: center;
@@ -105,8 +106,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-
 
 .App-header {
   background-color: #282c34;
