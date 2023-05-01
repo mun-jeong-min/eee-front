@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import logo from "./static/logo.png";
 import { instance } from "../util/instance";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Main = () => {
   const [data, setData] = useState("");
   const [code, setCode] = useState("");
+  const [disableLink, setDisableLink] = useState(false);
+
+  const clickLink = (e) => {
+    if (disableLink) {
+      e.preventDefault();
+    }
+  };
 
   const authCode = (e) => {
     setCode(e.target.value);
@@ -28,7 +35,18 @@ const Main = () => {
         email: data,
       })
       .then(function (res) {
-        console.log(res);
+        if (res.data == "로그인 성공" || res.data == "회원가입 성공") {
+          window.alert("로그인 성공!");
+        } else {
+          window.alert("인증 실패!");
+          setDisableLink(true);
+        }
+      })
+      .catch((error) => {
+        if (error.response.status != 200) {
+          window.alert("인증 실패!");
+          setDisableLink(true);
+        }
       });
   };
 
@@ -55,10 +73,13 @@ const Main = () => {
           type='text'
           placeholder='인증코드 입력'
           className='mainInput'
-          value={code.code}
+          value={code}
           onChange={authCode}></input>
-        <Link to='/home'>
-          <button className='mainButton' onClick={loginAuthCode}>
+        <Link to='/home' onClick={clickLink}>
+          <button
+            className='mainButton'
+            onClick={loginAuthCode}
+            disabled={disableLink}>
             시작
           </button>
         </Link>
