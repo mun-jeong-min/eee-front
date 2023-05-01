@@ -5,6 +5,18 @@
   margin-top: 75px;
 }
 
+.categoryInput {
+  border: 1px solid black;
+  width: 500px;
+  margin-left: 500px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.categoryInput:hover {
+  color: purple;
+}
+
 .search {
   margin-left: 50px;
 }
