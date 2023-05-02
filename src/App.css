@@ -5,6 +5,13 @@
   margin-top: 75px;
 }
 
+.clickDiv {
+  border: 1px solid black;
+  margin-left: 650px;
+  margin-top: 5px;
+  width: 200px;
+}
+
 .addButton {
   margin-top: 50px;
 }

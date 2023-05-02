@@ -4,8 +4,15 @@ import { instance } from "../util/instance";
 const Search = () => {
   const [data, setData] = useState("");
   const [list, setList] = useState([]);
+  const [cate, setCate] = useState([]);
   const input = (e) => {
     setData(e.target.value);
+  };
+
+  const category = () => {
+    instance.get("/practice").then(function (res) {
+      setCate(res.data.list);
+    });
   };
 
   const search = () => {
@@ -15,6 +22,7 @@ const Search = () => {
       })
       .then(function (res) {
         setList(res.data.list);
+        setCate([]);
       });
   };
 
@@ -28,11 +36,14 @@ const Search = () => {
             type='text'
             value={data}
             onChange={input}
+            onClick={category}
           />
           <button onClick={search}>검색</button>
+          {cate.map((v, i) => {
+            return <div className='clickDiv'>{v}</div>;
+          })}
         </div>
         {list.map((v, i) => {
-          console.log(v);
           return <div className='categoryInput'>{v.content}</div>;
         })}
       </div>
