@@ -35,7 +35,7 @@ const Main = () => {
         email: data,
       })
       .then(function (res) {
-        if (res.data == "로그인 성공" || res.data == "회원가입 성공") {
+        if (res.data === "로그인 성공" || res.data === "회원가입 성공") {
           window.alert("로그인 성공!");
         } else {
           window.alert("인증 실패!");

@@ -12,6 +12,13 @@
   width: 200px;
 }
 
+.addCategory {
+  border: 1px solid black;
+  width: 200px;
+  margin-top: 2px;
+  margin-left: 55px;
+}
+
 .addButton {
   margin-top: 50px;
 }

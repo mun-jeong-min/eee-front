@@ -5,6 +5,7 @@ const Add = () => {
   const [ex, setEx] = useState("");
   const [pr, setPr] = useState("");
   const [category, setCategory] = useState("");
+  const [cate, setCate] = useState([]);
 
   const changeEx = (e) => {
     setEx(e.target.value);
@@ -16,6 +17,12 @@ const Add = () => {
 
   const changeCategory = (e) => {
     setCategory(e.target.value);
+  };
+
+  const clickCategory = () => {
+    instance.get("/practice").then(function (res) {
+      setCate(res.data.list);
+    });
   };
 
   const clickEx = () => {
@@ -44,6 +51,7 @@ const Add = () => {
           window.alert("전송 성공!");
           setPr("");
           setCategory("");
+          setCate([]);
         } else {
           window.alert("전솔 실패!");
         }
@@ -82,7 +90,11 @@ const Add = () => {
             placeholder='운동 카테고리 입력'
             value={category}
             onChange={changeCategory}
+            onClick={clickCategory}
           />
+          {cate.map((v, i) => {
+            return <div className='addCategory'>{v}</div>;
+          })}
           <button className='addButton' onClick={clickPr}>
             ADD
           </button>
