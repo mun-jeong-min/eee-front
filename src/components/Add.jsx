@@ -24,7 +24,7 @@ const Add = () => {
         category: ex,
       })
       .then(function (res) {
-        if (res.status == 200) {
+        if (res.status === 200) {
           window.alert("전송 성공!");
           setEx("");
         } else {
@@ -40,7 +40,7 @@ const Add = () => {
         category: category,
       })
       .then(function (res) {
-        if (res.status == 200) {
+        if (res.status === 200) {
           window.alert("전송 성공!");
           setPr("");
           setCategory("");
