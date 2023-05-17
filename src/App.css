@@ -5,11 +5,19 @@
   margin-top: 75px;
 }
 
+.Question {
+  text-align: center;
+  background-color: #1a1d21;
+  height: 1000px;
+}
+
 .clickDiv {
-  border: 1px solid black;
-  margin-left: 650px;
-  margin-top: 5px;
-  width: 200px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin-left: 586px;
+  color: #6a6d71;
+  width: 355px;
 }
 
 .addCategory {
@@ -23,6 +31,15 @@
   margin-top: 50px;
 }
 
+.ReSearch {
+  height: 25px;
+  border: 0;
+}
+
+.ReSearch:hover {
+  border: 1px solid blue;
+}
+
 .addDiv {
   display: flex;
   flex-direction: column;
@@ -30,8 +47,10 @@
 
 .addInput {
   width: 300px;
-  height: 100px;
+  height: 50px;
   margin-bottom: 20px;
+  border-radius: 20px;
+  border: 1px solid black;
 }
 
 .add {
@@ -56,11 +75,12 @@
 }
 
 .questionCnt {
+  color: #fffcfc;
   margin-top: 1px;
-  border: 1px solid black;
+  border: 1px solid white;
   margin-left: 600px;
   width: 300px;
-  height: 30px;
+  height: 23px;
 }
 
 .questionCnt:hover {
@@ -77,12 +97,15 @@
   margin-top: 20px;
   width: 200px;
   height: 200px;
+  border-radius: 20px;
 }
 
 .questionButton {
   margin-top: 10px;
-  width: 75px;
+  width: 210px;
   height: 50px;
+  background-color: #b6f09c;
+  border-radius: 12px;
 }
 
 .categoryInput {

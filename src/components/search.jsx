@@ -38,7 +38,9 @@ const Search = () => {
             onChange={input}
             onClick={category}
           />
-          <button onClick={search}>검색</button>
+          <button className='ReSearch' onClick={search}>
+            🔍
+          </button>
           {cate.map((v, i) => {
             return <div className='clickDiv'>{v}</div>;
           })}

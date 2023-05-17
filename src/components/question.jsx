@@ -21,7 +21,7 @@ const Question = () => {
         content: data,
       })
       .then(function (res) {
-        if (res.status == 200) {
+        if (res.status === 200) {
           window.alert("요청 성공!");
           setData("");
         } else {
@@ -31,7 +31,7 @@ const Question = () => {
   };
 
   return (
-    <div className='App'>
+    <div className='Question'>
       <div>문의</div>
       <div className='questionDiv'>
         <input
