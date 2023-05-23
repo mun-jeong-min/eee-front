@@ -26,6 +26,12 @@ const Search = () => {
       });
   };
 
+  const handleOnKeys = (e) => {
+    if (e.key === "enter") {
+      search();
+    }
+  };
+
   return (
     <div className='App'>
       <div>
@@ -37,12 +43,17 @@ const Search = () => {
             value={data}
             onChange={input}
             onClick={category}
+            onKeyDown={handleOnKeys}
           />
           <button className='ReSearch' onClick={search}>
             🔍
           </button>
           {cate.map((v, i) => {
-            return <div className='clickDiv'>{v}</div>;
+            return (
+              <div className='clickDiv' onClick={() => setData(v)}>
+                {v}
+              </div>
+            );
           })}
         </div>
         {list.map((v, i) => {
