@@ -27,9 +27,13 @@ const Search = () => {
   };
 
   const handleOnKeys = (e) => {
-    if (e.key === "enter") {
+    if (e.key === "Enter") {
       search();
     }
+  };
+
+  const clickCate = (v) => {
+    setData(v);
   };
 
   return (
@@ -50,7 +54,11 @@ const Search = () => {
           </button>
           {cate.map((v, i) => {
             return (
-              <div className='clickDiv' onClick={() => setData(v)}>
+              <div
+                className='clickDiv'
+                onClick={() => {
+                  clickCate(v);
+                }}>
                 {v}
               </div>
             );
