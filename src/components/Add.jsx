@@ -47,14 +47,10 @@ const Add = () => {
         category: category,
       })
       .then(function (res) {
-        if (res.status === 200) {
-          window.alert("전송 성공!");
-          setPr("");
-          setCategory("");
-          setCate([]);
-        } else {
-          window.alert("전솔 실패!");
-        }
+        window.alert("전송 성공!");
+        setPr("");
+        setCategory("");
+        setCate([]);
       });
   };
 
@@ -93,7 +89,11 @@ const Add = () => {
             onClick={clickCategory}
           />
           {cate.map((v, i) => {
-            return <div className='addCategory'>{v}</div>;
+            return (
+              <div className='addCategory' onClick={() => setCategory(v)}>
+                {v}
+              </div>
+            );
           })}
           <button className='addButton' onClick={clickPr}>
             ADD
