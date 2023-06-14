@@ -62,7 +62,7 @@ const Add = () => {
           <div className='addDiv'>
             <input
               type='text'
-              placeholder='Enter text'
+              placeholder='Enter'
               className='addInput'
               value={ex}
               onChange={changeEx}
@@ -76,13 +76,14 @@ const Add = () => {
           <p>행동 추가</p>
           <input
             type='text'
-            placeholder='Enter text'
+            placeholder='Enter'
             className='addInput'
             value={pr}
             onChange={changePr}
           />
           <input
             type='text'
+            className='addPageCategory'
             placeholder='운동 카테고리 입력'
             value={category}
             onChange={changeCategory}
