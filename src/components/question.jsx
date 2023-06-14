@@ -32,7 +32,7 @@ const Question = () => {
 
   return (
     <div className='Question'>
-      <div>문의</div>
+      <div className='questionPageDiv'>문의 해주세요</div>
       <div className='questionDiv'>
         <input
           type='text'

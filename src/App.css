@@ -7,8 +7,12 @@
 
 .Question {
   text-align: center;
-  background-color: #1a1d21;
+  background-color: #fffcfc;
   height: 1000px;
+}
+
+.questionPageDiv {
+  margin-top: 40px;
 }
 
 .clickDiv {
@@ -49,6 +53,7 @@
 
 .ReSearch {
   height: 25px;
+
   border: 0;
 }
 
@@ -96,12 +101,13 @@
 }
 
 .questionCnt {
-  color: #fffcfc;
-  margin-top: 1px;
-  border: 1px solid white;
-  margin-left: 600px;
-  width: 300px;
+  color: black;
+  border: 1px solid black;
+  margin-left: 450px;
+  margin-top: 10px;
+  width: 600px;
   height: 23px;
+  padding: 10px;
 }
 
 .questionCnt:hover {
@@ -119,6 +125,7 @@
   width: 200px;
   height: 200px;
   border-radius: 20px;
+  text-align: center;
 }
 
 .questionButton {
