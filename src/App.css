@@ -21,6 +21,13 @@
   cursor: pointer;
 }
 
+.alarmDate {
+  padding-right: 9px;
+  margin-left: auto;
+  margin-top: 20px;
+  font-size: 10px;
+}
+
 .addCategory {
   border: 1px solid black;
   width: 200px;
@@ -149,7 +156,7 @@
 .alarm {
   margin-left: 500px;
   border: 1px solid black;
-  width: 500px;
+  width: 550px;
   border-color: #166cec;
   background-color: #e8f0fd;
   display: flex;

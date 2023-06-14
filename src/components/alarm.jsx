@@ -13,10 +13,12 @@ const Alarm = () => {
   return (
     <div className='App'>
       {data.map((v, i) => {
+        console.log(v);
         return (
           <div className='alarm'>
             <img className='alarmImg' src={star} alt='별' />
             <p className='alarmP'>{v.content}</p>
+            <p className='alarmDate'>{v.created_at}</p>
           </div>
         );
       })}
